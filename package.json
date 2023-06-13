@@ -1,0 +1,27 @@
+{
+  "name": "mono",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "workspaces": [
+    "packages/*",
+    "playground/*"
+  ],
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "test": "vitest",
+    "build": "pnpm -r --filter m-* run build",
+    "play:vue": "pnpm -C playground/vue-app dev",
+    "play:react": "pnpm -C playground/react-app dev",
+    "play:vanilla": "pnpm -C playground/vanilla-app dev",
+    "clean": "rm -rf node_modules **/*/node_modules **/node_modules dist **/*/dist **/dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "rimraf": "^5.0.1",
+    "tsx": "^3.12.7",
+    "vitest": "^0.32.0"
+  }
+}
