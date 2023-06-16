@@ -14,7 +14,7 @@
     "play:vue": "pnpm -C playground/vue-app dev",
     "play:react": "pnpm -C playground/react-app dev",
     "play:vanilla": "pnpm -C playground/vanilla-app dev",
-    "release": "bumpp package.json packages/*/package.json --commit --push --tag",
+    "release": "bumpp package.json packages/*/package.json && pnpm -r --filter m-* publish --access public",
     "clean": "rm -rf node_modules **/*/node_modules **/node_modules dist **/*/dist **/dist"
   },
   "keywords": [],
