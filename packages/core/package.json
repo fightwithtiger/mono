@@ -1,6 +1,6 @@
 {
   "name": "m-core",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
@@ -16,7 +16,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "rimraf dist && rollup -c"
+    "build": "rimraf dist && rollup -c",
+    "release": "tsx ../../scripts/version.ts"
   },
   "keywords": [],
   "author": "",
